@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1F1D1D;
+    
+}
+
+.nav {
+    display: flex; /* Faz com que os itens fiquem em linha */
+    align-items: center;
+}
+
+.nav > .submenu {
+    position: relative;
+    margin-right: 20px; /* Espaçamento entre os itens */
+
+}
+
+/* Estilo dos links de navegação */
+.nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Submenu */
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%; /* Coloca o submenu logo abaixo do item de menu */
+    left: 0;
+    
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+.submenu-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Garante que os links dentro do submenu fiquem empilhados */
+}
+
+.submenu-content a:hover {
+    background-color: #575757;
+}
+
+.submenu:hover > a {
+    background-color: #444;
+}
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+.logo {
+    font-size: 15px;
+
+    font-weight: lighter;
+}
+
+.nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.intro {
+    text-align: center;
+
+}
+
+.intro-image {
+    background-image: url('basico.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.intro-image h1 {
+    color: #fff;
+    font-size: 48px;
+    padding: 20px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.intro-text h2{
+    font-size: 50px;
+    font-family: verdana;
+    margin-bottom: 20px;
+}
+
+.intro-text p{
+    font-size: 16px;
+    font-family: Tahoma;
+}
+
+.music-production {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    gap: 20px; /* Espaço entre o texto e a imagem */
+    margin-top: 50px;
+}
+
+.music-production img {
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.music-production .text-container {
+    display: block; /* Garante que o texto esteja em bloco */
+    
+}
+
+.music-production .text-container p {
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+    font-size: 16px;
+}
+
+.caracteristicas p{
+    font-family: verdana;
+    font-size: 16px;
+}
+
+.caracteristicas-background {
+    background-image: url('elementos.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 0; /* Remove margem */
+}
+
+.intro-text li{
+    margin-bottom: 15px;
+}
+
+.intro-text p{
+    margin-bottom: 30px;
+}
+
+.musicas {
+    text-align: center;
+
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.musicas h2 {
+    font-size: 40px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 40px;
+}
+
+.musicas-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.musica-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30%;  /* Define a largura para 30% para permitir três cartões por linha */
+    max-width: 320px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.musica-card iframe {
+    border-radius: 5px;
+    width: 100%;
+    height: 180px; /* Aumenta a altura para dar um formato retangular */
+    border: none;
+}
+
+
+
+.artistas {
+    text-align: center;
+    padding-bottom:50px;
+    background-image: url('imagem-de-fundo-artistas.png'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.artistas h2 {
+    font-size: 40px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 40px;
+}
+
+.artistas-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.artista-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para destacar o texto */
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.artista-card img {
+    width: 180px;  /* Largura fixa */
+    height: 180px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    border-radius: 5px;
+}
+
+.artista-card p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #bbb;
+    height: 200px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    margin-left:100px;
+}
+
+.footer-left p{
+margin-bottom: 10px;
+}
+
+.footer .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    margin-right:100px;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 70px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #aaa; /* Efeito hover */
+}
+
+@media (max-width: 768px) {
+    .intro-text h2 {
+        font-size: 28px;
+    }
+
+    .logo-image{
+        margin-bottom: 15px;
+    }
+
+    .intro-image {
+        height: 150px;
+    }
+
+    .musicas h2,
+    .artistas h2 {
+        font-size: 30px;
+    }
+
+    .musica-card,
+    .artista-card {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .intro-text,
+    .musicas {
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+    
+    .header, 
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .music-production img {
+        width: 300px;
+        height: 250px;
+        margin-right: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+    }
+    
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav a {
+        margin: 0 5px;
+    }
+
+    .music-production {
+        display: flex;
+        align-items: center;
+        flex-direction: column; /* Coloca o conteúdo em coluna */
+        margin-top: 50px;
+    }
+    
+
+    .intro-image h1 {
+        font-size: 24px;
+    }
+
+    .intro-text h2 {
+        font-size: 24px;
+    }
+
+    .footer-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .music-production img {
+        width: 300px;
+        height: 250px;
+        margin-right: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+    }
+    
+
+    .intro-text,
+.musicas {
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.header, 
+.footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+}
